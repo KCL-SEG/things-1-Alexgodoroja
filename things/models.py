@@ -1,8 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-from django.core.validators import RegexValidator
-from django.db.models import Model
-class Thing(Model):
-    name = models.CharField()
-    description = models.CharField()
+
+class Thing(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.CharField(max_length=520)
     quantity = models.IntegerField()
